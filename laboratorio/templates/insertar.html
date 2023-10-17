@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initialscale=1.0">
+ <title>Laboratorios</title>
+</head>
+<style>
+ table {
+ border: 8px outset;
+ border-radius: 10px;
+ border-spacing: 10px;
+ padding: 20px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+ th,
+ td {
+ padding: 5px;
+ }
+</style>
+<body>
+ <h2 style="text-align:center"> Ingresar los Datos del Laboratorio</h2>
+ <form method="POST">
+ {% csrf_token %}
+ <table style="width:25%" align="center">
+ <tr>
+ <td>Nombre:
+ <td><input type="text" placeholder="Ingrese el Nombre del Laboratorio" name="nombre"</td>
+ </tr>
+ <tr>
+    <td>Ciudad:</td>
+    <td><input type="text" placeholder="Ingrese la Ciudad del Laboratorio" name="ciudad"</td>
+    </tr>
+    <tr>
+    <td>País:</td>
+    <td><input type="text" placeholder="Ingrese el País del Laboratorio" name="pais" </td>
+    </tr>
+    
+    </select></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center"><input type="submit"
+   class="btn btn-success"> </td>
+    </tr>
+    </table>
+    <br><br>
+    <div class="alert alert-danger" role="alert">
+    ¿Información de los Laboratorios?
+    </div>
+    <p>
+    <a href="{% url 'mostrar' %}">Ir a información de los laboratorios--></a>
+    </p>
+    </form>
+   </body>
+   </html>
